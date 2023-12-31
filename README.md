@@ -5,6 +5,10 @@ To write a program to perform selection sort and insertion sort using python pro
 1.	Hardware – PCs
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
+1. start the program to sort and inserting sort fas function
+2. then give condition respective to the question in for loop
+3. then seperate the values
+4. now the sorting and insertion sorting as been done to give output
 ## Selection Sort Algorithm:
 1.	Set the first unsorted element as the minimum
 2.	For each of the unsorted elements, check if the element < current minimum.
@@ -20,7 +24,21 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: FRANKLIN RAJ G
+RegisterNumber: 23001518
+'''
+def selection_sort(nums):
+    for i in range(len(nums)):
+        lowest_value_index=i
+        for j in range(i+1,len(nums)):
+            if nums[j]<nums[lowest_value_index]:
+                lowest_value_index=j
+        nums[i],nums[lowest_value_index]=nums[lowest_value_index],nums[i]
+list_of_nums=eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
+    
 
 
 
@@ -28,7 +46,25 @@ i)	#Selection Sort
 ```
 ii)	#Insertion Sort
 ```
-
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: franklin raj g
+RegisterNumber: 23001518
+'''
+def insertion_sort(nums):
+    
+    for i in range(1,len(nums)):
+        item_to_insert = nums[i]
+        j= i-1
+         
+        while j>=0 and nums[j]>item_to_insert:
+            nums[j+1]=nums[j]
+             
+            j-=1
+        nums[j+1]=item_to_insert
+    
+list_of_nums = eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)    
 
 
 
@@ -36,7 +72,10 @@ ii)	#Insertion Sort
 
 ```
 
+
 ## Output:
+![Screenshot 2023-12-31 235324](https://github.com/franklinraj/Sorting-Algorithm/assets/148993740/8101cf33-d080-457e-8bf8-89dff371b166)
+![Screenshot 2023-12-31 235337](https://github.com/franklinraj/Sorting-Algorithm/assets/148993740/48361c65-e60b-40e3-9049-2ed8000fde0d)
 
 
 ## Result:
